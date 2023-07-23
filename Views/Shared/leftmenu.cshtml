@@ -1,0 +1,171 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div role="menu" class="_3k3RwDkEsbX50bb-DBvuWj">
+    <div aria-live="assertive" aria-label=""></div>
+    <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">
+        @if (Context.Session.GetString("name") == null)
+        {
+
+        }
+        else if (Model.Community.Count == 0)
+        {
+            <span>Recommended</span>
+        }
+        else
+        {
+            <span>your</span>
+
+        }
+
+        communities
+    </div>
+    @*        <button id="focus-CreateCommunity" role="menuitem" class="_26MVepkxZHzpNv1cuAA4JA _2MgAHlPDdKvXiG-Qbz5cbC oiDWziAp_Bua6rb7oQKXs" tabindex="-1" aria-label="Create Community"><i class="cq0sTeCPC4GI78UNPdClD icon icon-add"></i><span class="_1nBP1OfpQDgTmzRFqaVult ">Create Community</span></button>
+    *@
+    @if (Model.Community == null)
+    {
+        @foreach (var item in Model.AllCommunities)
+        {
+            <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2s427" role="menuitem" tabindex="-1" aria-label="r/Eyebleach" href="/home/communitydetail?id=@item.Id">
+                <img alt="Subreddit Icon" role="presentation" src="~/img/@item.Logo" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/@item.Name</span>
+                @*<div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>*@
+            </a>
+        }
+    }
+    else
+    {
+        if (Model.Community.Count == 0)
+        {
+            @foreach (var item in Model.AllCommunities)
+            {
+                <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2s427" role="menuitem" tabindex="-1" aria-label="r/Eyebleach" href="/home/communitydetail?id=@item.Id">
+                    <img alt="Subreddit Icon" role="presentation" src="~/img/@item.Logo" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/@item.Name</span>
+                    @*<div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>*@
+                </a>
+            }
+        }
+
+        @foreach (var item in Model.Community)
+        {
+            <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2s427" role="menuitem" tabindex="-1" aria-label="r/Eyebleach" href="/home/communitydetail?id=@item.Id">
+                <img alt="Subreddit Icon" role="presentation" src="~/img/@item.Logo" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/@item.Name</span>
+                @*<div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>*@
+            </a>
+        }
+
+    }
+    @*  <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2s427" role="menuitem" tabindex="-1" aria-label="r/Eyebleach" href="/r/Eyebleach/">
+    <img alt="Subreddit Icon" role="presentation" src="https://b.thumbs.redditmedia.com/MD9KQJnI4uIuXFUzA3DWabdGKJYceQ1uk2_ktRQXcgY.png" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb"></span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+
+    <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2r0ij" role="menuitem" tabindex="-1" aria-label="r/announcements" href="/r/announcements/">
+    <img alt="Subreddit Icon" role="presentation" src="https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(252, 71, 30);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/announcements</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+    <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2s427" role="menuitem" tabindex="-1" aria-label="r/Eyebleach" href="/r/Eyebleach/">
+    <img alt="Subreddit Icon" role="presentation" src="https://b.thumbs.redditmedia.com/MD9KQJnI4uIuXFUzA3DWabdGKJYceQ1uk2_ktRQXcgY.png" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/Eyebleach</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+    <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_m0bnr" role="menuitem" tabindex="-1" aria-label="r/nextfuckinglevel" href="/r/nextfuckinglevel/">
+    <img alt="Subreddit Icon" role="presentation" src="https://styles.redditmedia.com/t5_m0bnr/styles/communityIcon_qanlm185crr71.png" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(245, 69, 4);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/nextfuckinglevel</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+    <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2tex6" role="menuitem" tabindex="-1" aria-label="r/ProgrammerHumor" href="/r/ProgrammerHumor/">
+    <img alt="Subreddit Icon" role="presentation" src="https://styles.redditmedia.com/t5_2tex6/styles/communityIcon_u89jf60zv7p41.png" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(255, 69, 0);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/ProgrammerHumor</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+    <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-subt5_2qh87" role="menuitem" tabindex="-1" aria-label="r/space" href="/r/space/">
+    <img alt="Subreddit Icon" role="presentation" src="https://styles.redditmedia.com/t5_2qh87/styles/communityIcon_ub69d1lpjlf51.png" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(55, 60, 63);"><span class="_2aqH0n-kSzFY7HZZ5GL-Jb">r/space</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+    *@
+    <style>
+        .XEkFoehJNxIH9Wlr5Ilzd {
+            transition: transform .5s ease;
+            margin-bottom: 3px;
+        }
+
+            .XEkFoehJNxIH9Wlr5Ilzd:hover {
+                margin-bottom: 3px;
+                border-radius: 15px;
+                box-shadow: 2px 2px 9px -1px rgba(0,0,0,0.41);
+                transform: scale(1.03);
+            }
+
+
+    </style>
+    @if (Context.Session.GetInt32("Id") != null)
+    {
+
+        <div class="_1Ok0AiXwAeYl2SsUBaxgPC _2XRPX11qL4-HxWPuHAzOW5" role="heading">
+            @if (Model.FriendRequests.Count == 0 && Model.FriendRequestsFromFriend.Count == 0)
+            {
+
+            }
+            else
+            {
+
+                <span>following</span>
+            }
+
+        </div>
+        @foreach (var i in Model.FriendRequests)
+        {
+            <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-prot5_ao7d4" role="menuitem" tabindex="-1" aria-label="u/iFergYT" href="/home/userdetail?id=@i.ReceiverId">
+                <div class="_2p14AQvJBvTrEEa4csiW9v _1TENjLYSaj4L4uJMZa3DRe">
+                    <div class="_1cyAeeYDGrx7MPL_jRwKZ _3HTtcITrR-crvsRovLrijl ">
+                        <div class="_2_QqG5dG916znjlVV8ZCbw"></div>
+                        <div class="_1XJXnCAngvZLEeLpB3oa4L"> <img alt="Subreddit Icon" role="presentation" src="~/img/@i.Receiver.Image" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"></div>
+                    </div>
+                </div>
+                <span class="_2aqH0n-kSzFY7HZZ5GL-Jb">u/@i.Receiver.Fname</span>
+                @*<div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>*@
+            </a>
+        } @foreach (var i in Model.FriendRequestsFromFriend)
+        {
+            <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-prot5_ao7d4" role="menuitem" tabindex="-1" aria-label="u/iFergYT" href="/home/userdetail?id=@i.SenderId">
+                <div class="_2p14AQvJBvTrEEa4csiW9v _1TENjLYSaj4L4uJMZa3DRe">
+                    <div class="_1cyAeeYDGrx7MPL_jRwKZ _3HTtcITrR-crvsRovLrijl ">
+                        <div class="_2_QqG5dG916znjlVV8ZCbw"></div>
+                        <div class="_1XJXnCAngvZLEeLpB3oa4L"> <img alt="Subreddit Icon" role="presentation" src="~/img/@i.Sender.Image" class="_34CfAAowTqdbNDYXz5tBTW _3HTtcITrR-crvsRovLrijl " style="background-color: rgb(132, 214, 190);"></div>
+                    </div>
+                </div>
+                <span class="_2aqH0n-kSzFY7HZZ5GL-Jb">u/@i.Sender.Fname</span>
+                @*<div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>*@
+            </a>
+        }
+    }
+    @* <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-prot5_ao7d4" role="menuitem" tabindex="-1" aria-label="u/iFergYT" href="/user/iFergYT/">
+    <div class="_2p14AQvJBvTrEEa4csiW9v _1TENjLYSaj4L4uJMZa3DRe">
+    <div class="_1cyAeeYDGrx7MPL_jRwKZ _3HTtcITrR-crvsRovLrijl ">
+    <div class="_2_QqG5dG916znjlVV8ZCbw"></div>
+    <div class="_1XJXnCAngvZLEeLpB3oa4L"><img alt="User avatar" class="ScrrUjzznpAqm92uwgnvO" src="https://styles.redditmedia.com/t5_ao7d4/styles/profileIcon_snoo850d027e-ba0f-4f1a-b76a-33de5cf63303-headshot-f.png?width=256&amp;height=256&amp;frame=1&amp;auto=webp&amp;crop=256:256,smart&amp;v=enabled&amp;s=bb769bbad115c75ac35cac2a231b79301981a013"></div>
+    </div>
+    </div>
+    <span class="_2aqH0n-kSzFY7HZZ5GL-Jb">u/iFergYT</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>
+    <a class="XEkFoehJNxIH9Wlr5Ilzd _2MgAHlPDdKvXiG-Qbz5cbC " id="focus-prot5_3o8dbj" role="menuitem" tabindex="-1" aria-label="u/TrollhuntersKing" href="/user/TrollhuntersKing/">
+    <div class="_2p14AQvJBvTrEEa4csiW9v "><img alt="User avatar" class="_2TN8dEgAQbSyKntWpSPYM7 _3HTtcITrR-crvsRovLrijl" src="https://styles.redditmedia.com/t5_3o8dbj/styles/profileIcon_vsuyks901nk81.jpg?width=256&amp;height=256&amp;frame=1&amp;auto=webp&amp;crop=256:256,smart&amp;v=enabled&amp;s=97ff5474de143a8b49aa1fe5342c54ea1667bc6b"></div>
+    <span class="_2aqH0n-kSzFY7HZZ5GL-Jb">u/TrollhuntersKing</span>
+    <div><i class="t2A0mgkgGzc8cAahJsR7a  icon icon-star"></i></div>
+    </a>*@
+    @* <div align="center">*@
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9209217517269427"
+            crossorigin="anonymous"></script>
+    <!-- chirag -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-adtest="on"
+         data-ad-client="ca-pub-9209217517269427"
+         data-ad-slot="4555343901"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    @*</div>*@
+</div>      

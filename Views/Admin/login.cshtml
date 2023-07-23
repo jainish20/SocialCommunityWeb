@@ -1,0 +1,35 @@
+﻿<html>
+    <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
+    <link rel="stylesheet" href="/css/StyleSheet.css" />
+    </head>
+    <body>
+    <form asp-controller="admin" asp-action="verify" method="post">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <img src="~/img/Data_security_05.jpg" id="icon" alt="User Icon" />
+                </div>
+
+                <!-- Login Form -->
+                <form>
+                    <input required="true" type="text" id="login" class="fadeIn second" name="name" placeholder="User Name">
+                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+                    <div style="height:2rem;width:100%;color:red;">@Context.Session.GetString("awrong")</div>
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
+
+                <!-- Remind Passowrd -->
+              
+
+            </div>
+        </div>
+     
+    </form>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>
